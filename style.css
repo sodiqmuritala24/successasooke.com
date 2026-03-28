@@ -225,12 +225,26 @@ body{
   width:90%;
   margin:60px auto;
 }
+
+/* Mobile (default) */
 .lekan1 iframe {
   width: 100%;
-  max-width: 100%;
-  aspect-ratio: 11/ 10;
+  aspect-ratio: 9 / 16;
   border-radius: 10px;
-  display: block;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .lekan1 iframe {
+    aspect-ratio: 3 / 4;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .lekan1 iframe {
+    aspect-ratio: 16 / 9;
+  }
 }
 
 
@@ -470,7 +484,7 @@ h5{
 }
 
 /* MOBILE */
-@media(max-width:768px){
+@media(max-width:768px)
 
   .about{
     flex-direction:column;
@@ -481,7 +495,7 @@ h5{
     text-align:center;
   }
 
-}
+
 
 
 
