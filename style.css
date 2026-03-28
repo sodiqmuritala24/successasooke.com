@@ -226,35 +226,25 @@ body{
   margin:60px auto;
 }
 
-/* Mobile (default) */
+
 .lekan1 iframe {
   width: 100%;
-  aspect-ratio: 9 / 16;
+  max-width: 100%;
+  aspect-ratio: 11/ 11;
+  border-radius: 10px;
+  display: block;
+}
+
+.lekan1 img{
+  width: 100%;
+  aspect-ratio: 4 / 4;
+  object-fit: cover;
   border-radius: 10px;
 }
 
-/* Tablet */
-@media (min-width: 768px) {
-  .lekan1 iframe {
-    aspect-ratio: 3 / 4;
-  }
-}
-
-/* Desktop */
-@media (min-width: 1024px) {
-  .lekan1 iframe {
-    aspect-ratio: 16 / 9;
-  }
-}
 
 
 
-.lekan1 img{
-  width:100%;
-  height:400px;
-  object-fit:cover;
-  border-radius:10px;
-}
 
 .lekan1 h3{
   text-align:center;
