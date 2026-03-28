@@ -227,9 +227,13 @@ body{
 }
 .lekan1 iframe {
   width: 100%;
-  aspect-ratio: 11 / 10; /* because your video is vertical */
+  max-width: 100%;
+  aspect-ratio: 11/ 10;
   border-radius: 10px;
+  display: block;
 }
+
+
 
 .lekan1 img{
   width:100%;
