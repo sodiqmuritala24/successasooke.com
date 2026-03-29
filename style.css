@@ -70,6 +70,24 @@ body{
               transform: scale(1.05);
 
 }
+.taiye2::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+.taiye2{
+  position: relative;
+}
+
+#taiyetext{
+  position: relative;
+  z-index: 2;
+}
 
 #taiyetext{
   position:absolute;
@@ -138,6 +156,32 @@ body{
   from {opacity: 0; transform: translateY(20px);}
   to {opacity: 1; transform: translateY(0);}
 }
+@media (max-width:768px){
+
+  .taiye2{
+    height: 60vh; /* reduce height */
+    background-position: center;
+  }
+
+  #taiyetext h1{
+    font-size: 28px; /* reduce from 50px */
+  }
+
+  #taiyetext p{
+    font-size: 16px; /* reduce from 25px */
+  }
+
+  #taiyetext{
+    width: 90%;
+  }
+
+  .btn{
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+}
+
 
 
 /* IMAGE GRID */
@@ -241,9 +285,6 @@ body{
   object-fit: cover;
   border-radius: 10px;
 }
-
-
-
 
 
 .lekan1 h3{
@@ -431,9 +472,10 @@ h5{
   flex-wrap:wrap;
   align-items:center;
   justify-content:center;
-  gap:40px;
+  gap:25px;
   padding:60px 5%;
   background:rgba(246, 242, 242, 0.9);
+  border-radius: 12px;
 }
 
 /* TEXT SIDE */
@@ -471,25 +513,51 @@ h5{
   max-width:500px;
   border-radius:15px;
   box-shadow:0 10px 30px rgba(0,0,0,0.2);
+  border-radius: 12px;
 }
 
-/* MOBILE */
-@media(max-width:768px)
+@media (max-width:768px){
 
   .about{
-    flex-direction:column;
-    text-align:center;
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 15px;
+    gap: 20px;
+  }
+
+  /* TEXT FIRST */
+  .about-us{
+    order: 1;
+    width: 100%;
+  }
+
+  /* IMAGE SECOND */
+  .about2{
+    order: 2;
+    width: 100%;
   }
 
   .about-us h2{
-    text-align:center;
+    text-align: center;
+    font-size: 24px;
   }
 
+  .about-us p{
+    font-size: 16px;
+    line-height: 1.6;
+  }
 
+  .about2 img{
+    width: 100%;
+    max-width: 100%;
+    margin-top: 20px;
+  }
 
+}
 
-
-/* SERVICE SECTION */
+  .serv1{
+    margin-left:0;
+  }/* SERVICE SECTION */
 .service{
   display:flex;
   flex-wrap:wrap;
@@ -525,20 +593,36 @@ h5{
   border-radius:15px;
 }
 
-/* MOBILE */
-@media(max-width:768px){
+/* MOBILE FIX */
+@media (max-width: 768px){
 
   .service{
-    flex-direction:column;
-    text-align:center;
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 15px;
   }
 
-  .about2 img{
-    margin-top:30px;
+  /* Make image come first */
+  .serv{
+    order: 1;
+    width: 100%;
   }
 
+  /* Then text */
   .serv1{
-    margin-left:0;
+    order: 2;
+    width: 100%;
+  }
+
+  .serv img{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .serv1 p{
+    font-size: 16px;
+    line-height: 1.6;
   }
 
 }
@@ -663,19 +747,31 @@ h5{
   transform:scale(1.05);
 }
 
-/* MOBILE */
-@media(max-width:768px){
+@media (max-width:768px){
 
   .contact-container{
-    flex-direction:column;
-    align-items:center;
+    flex-direction: column;
+    gap: 20px;
   }
 
-  .contact-info{
-    text-align:center;
+  .contact-info,
+  .contact-form{
+    width: 100%;
+  }
+
+  .contact-form input,
+  .contact-form textarea{
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .contact-form button{
+    width: 100%;
   }
 
 }
+
+
 
 .branches {
   padding: 60px 20px;
@@ -862,6 +958,19 @@ h5{
   color: #444;
   font-size: 14px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
